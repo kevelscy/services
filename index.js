@@ -10,6 +10,10 @@ server.use(express.urlencoded({ extended: true }))
 
 server.set('PORT', process.env.PORT || 3000)
 
+server.get('/', (req, res) => {
+  res.send('<div>Api Test Instagram</div>')
+})
+
 server.get('/api/youtube', async (req, res) => {
   return res.status(200).json({
     data: 'youtube',
